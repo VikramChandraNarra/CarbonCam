@@ -2,21 +2,20 @@ package com.example.carboncam;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.carboncam.databinding.ActivityProfileBinding;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.Description;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.charts.BarChart;
 
-import java.text.SimpleDateFormat;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 public class ProfileActivity extends AppCompatActivity {
-    private LineChart lineChart;
+    private BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,25 +23,38 @@ public class ProfileActivity extends AppCompatActivity {
         com.example.carboncam.databinding.ActivityProfileBinding binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        lineChart = findViewById(R.id.linechart);
+        //pre-fill bar chart
+        barChart = findViewById(R.id.barChart);
         configureChart();
     }
 
     private void configureChart() {
+        //bar chart title
         Description desc = new Description();
         desc.setText("Stock Price History");
         desc.setTextSize(28);
-        lineChart.setDescription(desc);
+        barChart.setDescription(desc);
 
-        XAxis xAxis = lineChart.getXAxis();
-        xAxis.setValueFormatter(new ValueFormatter() {
-            private final SimpleDateFormat mFormat = new SimpleDateFormat("dd MMM", Locale.ENGLISH);
+        //set bar chart data
+        BarDataSet barDataSet = new BarDataSet(getData(), "Geeks for Geeks");
+        BarData barData = new BarData(barDataSet);
+        barChart.setData(barData);
 
-            @Override
-            public String getFormattedValue(float value) {
-                long millis = (long) value * 1000L;
-                return mFormat.format(new Date(millis));
-            }
-        });
+        //customize chart
+        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        barDataSet.setValueTextSize(16f);
+    }
+
+    //prefill data
+    private ArrayList<BarEntry> getData() {
+        ArrayList<BarEntry> entries = new ArrayList<>();
+        entries.add(new BarEntry(1f, 4));
+        entries.add(new BarEntry(2f, 6));
+        entries.add(new BarEntry(3f, 8));
+        entries.add(new BarEntry(4f, 2));
+        entries.add(new BarEntry(5f, 4));
+        entries.add(new BarEntry(6f, 1));
+
+        return entries;
     }
 }
