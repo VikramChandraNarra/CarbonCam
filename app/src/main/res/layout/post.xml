@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="700dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--                app:autoSizeMaxTextSize="26dp"-->
+<!--                app:autoSizeMinTextSize="24dp" />-->
+
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="350dp"
+                android:layout_marginLeft="25dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:singleLine="true"
+                android:text="Vikram Narra"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/postpic"
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp" />
+
+            <TextView
+                android:id="@+id/carbon"
+                android:layout_width="217dp"
+                android:layout_height="50dp"
+
+
+                android:layout_below="@+id/postpic"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:textSize="20dp"
+
+                android:singleLine="true"
+                android:text="Carbon Rating: 344"
+                android:textColor="@color/black" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/postpic"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/earthicon"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/like"/>
+
+            <Button
+                android:id="@+id/comment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/postpic"
+                android:background="@drawable/ic_baseline_add_comment_24"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="0dp" />
+
+            <TextView
+                android:id="@+id/description"
+
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:text="description"
+                android:layout_below="@+id/like"
+                android:layout_marginLeft="25dp"/>
+
+            <!--                app:autoSizeMaxTextSize="26dp"-->
+<!--                app:autoSizeMinTextSize="24dp" />-->
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
