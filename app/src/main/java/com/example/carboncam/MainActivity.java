@@ -16,8 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
-
     ImageView imageview;
     Button btopen;
     @Override
