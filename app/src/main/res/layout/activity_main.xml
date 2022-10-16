@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="10dp"
+    android:background="@color/purple_700"
     tools:context=".MainActivity">
 
     <Button
@@ -43,6 +43,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.333" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
