@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
+                startActivityForResult(intent, 101);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
@@ -76,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUserInfo(){
-        objects.add(new ScannedItem("eee", 4, bm));
-        objects.add(new ScannedItem("eee", 4, bm));
-        objects.add(new ScannedItem("eee", 4, bm));
+
 
     }
 
@@ -88,11 +86,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        System.out.println("his");
+        System.out.println("his\n\n\n");
 
-        if (requestCode == 0) {
+        if (requestCode == 101) {
             if (data != null) {
-                Bitmap captureImage = (Bitmap) data.getExtras().get("data");
+                Bitmap captureImage = (Bitmap)data.getExtras().get("data");
                 // Here is where you inputting the values of the ML algorihtm, from extrapolatign the data
                 ScannedItem o = new ScannedItem("hello", 4, captureImage);
                 objects.add(o);

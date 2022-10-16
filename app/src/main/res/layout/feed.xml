@@ -19,15 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textColor="@color/white"
-            android:textSize="20dp"
 
-            android:gravity="center_vertical"
-            android:text="Welcome, Vikram!" />
 
         <Button
             android:id="@+id/profile_feed"
@@ -45,14 +37,16 @@
             android:background="@drawable/ic_baseline_camera_alt_24"
 
             />
-
         <Button
             android:id="@+id/list_feed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="100dp"
-            android:text="list" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@drawable/ic_baseline_format_list_bulleted_24"
+
+            />
+
+
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

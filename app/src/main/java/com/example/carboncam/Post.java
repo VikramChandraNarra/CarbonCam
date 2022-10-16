@@ -1,6 +1,7 @@
 package com.example.carboncam;
 
 import android.graphics.Bitmap;
+import android.widget.ImageView;
 
 public class Post {
     String author, description;

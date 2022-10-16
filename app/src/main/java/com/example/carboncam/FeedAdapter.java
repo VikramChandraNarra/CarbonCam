@@ -28,12 +28,21 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull FeedAdapter.MyViewHolder holder, int position) {
-        int temp = posts.size() - position;
-        Post post = posts.get(temp-1);
+        int temp = posts.size() - position - 1;
+        Post post = posts.get(temp);
         holder.carbon.setText("Carbon Rating: " + Integer.toString(post.getcarbon()));
         holder.author.setText(post.getAuthor());
         holder.description.setText(post.getDescription());
-        holder.postpic.setImageBitmap(post.getPostpic());
+        if (temp == 0) {
+            holder.postpic.setBackgroundResource(R.drawable.paperstraw);
+        } else if (temp == 1){
+            holder.postpic.setBackgroundResource(R.drawable.wrapper);
+
+        }else if (temp == 2) {
+            holder.postpic.setBackgroundResource(R.drawable.waterbottle);
+
+        }
+
 
 
 

@@ -83,9 +83,9 @@ public class Feed extends AppCompatActivity {
     }
 
     private void setUserInfo(){
-        posts.add(new Post("eee", "I'm dead", 100, bm));
-        posts.add(new Post("eee", "I'm dead2", 100, bm));
-        posts.add(new Post("eee", "I'm dead3", 100, bm));
+        posts.add(new Post("Vikram Narra", "Waterbottle :)", 100, null));
+        posts.add(new Post("Divyansh", "Wrapper :/", 110, null));
+        posts.add(new Post("Haris", "Paper Paper", 90, null));
 
     }
 

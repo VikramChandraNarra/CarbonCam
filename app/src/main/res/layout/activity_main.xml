@@ -36,9 +36,9 @@
 
     <Button
         android:id="@+id/list_back"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="BACK SIGN"
+        android:text="BACK"
         app:layout_constraintBottom_toTopOf="@+id/recycler_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
