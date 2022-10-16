@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         setUserInfo();
         setAdapter();
     }
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         objects.add(new ScannedItem("eee", 4, bm));
 
     }
+
+
 
 
 
