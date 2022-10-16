@@ -1,11 +1,14 @@
 package com.example.carboncam;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.carboncam.databinding.ActivityProfileBinding;
 import com.github.mikephil.charting.charts.BarChart;
-
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -16,12 +19,21 @@ import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
     private BarChart barChart;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         com.example.carboncam.databinding.ActivityProfileBinding binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        back = findViewById(R.id.profile_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, Feed.class);
+                startActivity(intent);
+            }
+        });
 
         //pre-fill bar chart
         barChart = findViewById(R.id.barChart);

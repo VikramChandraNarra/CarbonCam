@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 //    ImageView imageview;
     Button btopen;
-    Button feedbtn;
+    Button back;
     Bitmap bm;
     private RecyclerView recyclerView;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        imageview = findViewById(R.id.image_view);
         btopen = findViewById(R.id.bt_open);
-        feedbtn = findViewById(R.id.profile);
+        back = findViewById(R.id.list_back);
 
 
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -52,12 +52,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                Intent i = new Intent(MainActivity.this, Popup.class);
-                startActivity(i);
                 startActivityForResult(intent, 0);
             }
         });
-        feedbtn.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Feed.class);
@@ -90,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        System.out.println("his");
+
         if (requestCode == 0) {
             if (data != null) {
                 Bitmap captureImage = (Bitmap) data.getExtras().get("data");

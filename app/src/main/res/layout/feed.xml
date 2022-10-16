@@ -30,7 +30,7 @@
             android:text="Welcome, Vikram!" />
 
         <Button
-            android:id="@+id/profile2"
+            android:id="@+id/profile_feed"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -38,13 +38,21 @@
             android:background="@drawable/ic_baseline_person_24" />
 
         <Button
-            android:id="@+id/bt2"
+            android:id="@+id/camera_feed"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="right"
             android:background="@drawable/ic_baseline_camera_alt_24"
 
             />
+
+        <Button
+            android:id="@+id/list_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="100dp"
+            android:text="list" />
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

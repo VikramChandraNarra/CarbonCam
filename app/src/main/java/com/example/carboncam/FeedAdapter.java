@@ -28,8 +28,8 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull FeedAdapter.MyViewHolder holder, int position) {
-
-        Post post = posts.get(position);
+        int temp = posts.size() - position;
+        Post post = posts.get(temp-1);
         holder.carbon.setText("Carbon Rating: " + Integer.toString(post.getcarbon()));
         holder.author.setText(post.getAuthor());
         holder.description.setText(post.getDescription());
