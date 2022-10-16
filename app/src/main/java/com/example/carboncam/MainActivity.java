@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent i = new Intent(MainActivity.this, Popup.class);
+                startActivity(i);
                 startActivityForResult(intent, 0);
             }
         });
