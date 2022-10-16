@@ -60,6 +60,10 @@
             android:name=".Popup"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".Feed"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
