@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".IndividualPicture">
 
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:text="Welcome, Vikram!" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
