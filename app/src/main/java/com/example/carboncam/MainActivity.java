@@ -76,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUserInfo(){
+        objects.add(new ScannedItem("Plastic Bottle", 83, null));
+        objects.add(new ScannedItem("Tin Can", 170, null));
+        objects.add(new ScannedItem("Paper Sheets", 60, null));
+        objects.add(new ScannedItem("Candy Wrapper", 50, null));
 
 
     }
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        System.out.println("his\n\n\n");
+        System.out.println("his");
 
         if (requestCode == 101) {
             if (data != null) {

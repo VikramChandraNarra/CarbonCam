@@ -35,6 +35,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.title.setText(object.getTitle());
         holder.preview.setImageBitmap(object.getImageView());
 
+        if (temp == 0) {
+            holder.preview.setBackgroundResource(R.drawable.wrapper);
+
+        }else if (temp == 1) {
+            holder.preview.setBackgroundResource(R.drawable.waterbottle);
+
+        }else if (temp == 2) {
+            holder.preview.setBackgroundResource(R.drawable.coke);
+
+        }else if (temp == 3) {
+            holder.preview.setBackgroundResource(R.drawable.paperstraw);
+
+        }
+
+
 
     }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ProfileActivity">
 
     <LinearLayout
@@ -21,6 +22,8 @@
             <Button
                 android:id="@+id/profile_back"
                 android:layout_width="wrap_content"
+                android:text="Back"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"/>
 
             <ImageView
@@ -144,6 +147,7 @@
 
             <!-- add graph here -->
             <com.github.mikephil.charting.charts.BarChart
+
                 android:id="@+id/barChart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -156,6 +160,7 @@
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="30dp"
+
             android:text="Average Carbon Footprint"/>
 
     </LinearLayout>

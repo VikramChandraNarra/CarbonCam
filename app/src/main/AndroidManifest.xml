@@ -26,10 +26,23 @@
         android:theme="@style/Theme.CarbonCam"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ProfileActivity"
             android:exported="false"
             android:label="@string/title_activity_profile">
-<!--            android:theme="@style/Theme.CarbonCam.NoActionBar">-->
+
+            <!-- android:theme="@style/Theme.CarbonCam.NoActionBar"> -->
 
             <meta-data
                 android:name="android.app.lib_name"
@@ -44,24 +57,14 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".IndividualPicture"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".Feed"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
