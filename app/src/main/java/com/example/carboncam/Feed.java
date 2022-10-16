@@ -1,18 +1,12 @@
 package com.example.carboncam;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +28,7 @@ public class Feed extends AppCompatActivity {
         recyclerView2 = findViewById(R.id.recycler_view2);
 
 //        imageview = findViewById(R.id.image_view);
-//        btopen2 = findViewById(R.id.bt2);
+        btopen2 = findViewById(R.id.bt2);
 //
 //        if (ContextCompat.checkSelfPermission(Feed.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
 //            ActivityCompat.requestPermissions(Feed.this,
@@ -44,13 +38,13 @@ public class Feed extends AppCompatActivity {
 //                    100);
 //        }
 //
-//        btopen2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//                startActivityForResult(intent, 0);
-//            }
-//        });
+        btopen2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Feed.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
 
         setUserInfo();
         setAdapter();
