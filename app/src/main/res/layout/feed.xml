@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/purple_700"
         android:id="@+id/cards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,17 +19,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+
+            android:gravity="center_vertical"
+            android:text="Welcome, Vikram!" />
+
         <Button
             android:id="@+id/profile2"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="center"
+
             android:background="@drawable/ic_baseline_person_24" />
 
         <Button
             android:id="@+id/bt2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:background="@drawable/ic_baseline_camera_alt_24"
 
             />
