@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Camera;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -51,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         btopen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 101);
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
