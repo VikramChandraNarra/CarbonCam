@@ -31,7 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
     private void configureChart() {
         //bar chart title
         Description desc = new Description();
-        desc.setText("Stock Price History");
+        desc.setText("");
         desc.setTextSize(28);
         barChart.setDescription(desc);
 
